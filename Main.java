@@ -2,6 +2,10 @@ import memento.*;
 
 public class Main{
     public static void main(String[] args){
+        testMemento();
+    }
+
+    public static void testMemento(){
         var editor = new Editor();
         var history = new History();
 
