@@ -1,8 +1,10 @@
 import memento.*;
+import state.*;
 
 public class Main{
     public static void main(String[] args){
         testMemento();
+        testState();
     }
 
     public static void testMemento(){
@@ -20,5 +22,12 @@ public class Main{
         editor.restore(history.pop());
 
         System.out.println(editor.getContent());
+    }
+
+    public static void testState(){
+        var canvas = new Canvas();
+        canvas.setCurrentTool(new Brush());
+        canvas.mouseDown();
+        canvas.mouseUp();
     }
 }
